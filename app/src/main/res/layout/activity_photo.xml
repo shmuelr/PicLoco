@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.orbitdesign.panoramiopics.activities.PhotoActivity">
+
+
+
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:id="@+id/photoImageView"
+
+        />
+
+    <ProgressBar
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/photoImageView"
+        android:layout_below="@+id/dropShadow" />
+
+
+    <include
+
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <View
+        android:id="@+id/dropShadow"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow" />
+
+   <ScrollView
+       android:layout_below="@+id/photoImageView"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:paddingLeft="8dp"
+       android:paddingRight="8dp"
+
+       android:id="@+id/scrollView">
+
+       <android.support.v7.widget.CardView
+           xmlns:card_view="http://schemas.android.com/apk/res-auto"
+           android:id="@+id/metaDataCard"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+
+           card_view:cardCornerRadius="4dp"
+          >
+
+
+           <LinearLayout
+               android:padding="8dp"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:padding="8dp"
+                   android:singleLine="true"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textViewLine1"/>
+
+               <TextView
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:padding="8dp"
+                   android:singleLine="true"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textViewLine2"/>
+
+               <TextView
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:padding="8dp"
+                   android:singleLine="true"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textViewLine3"/>
+
+               <TextView
+                   android:clickable="true"
+                   android:background="?android:selectableItemBackground"
+                   android:textStyle="italic"
+                   android:textAppearance="?android:attr/textAppearanceMedium"
+                   android:padding="8dp"
+                   android:singleLine="true"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textViewLine4"/>
+
+
+           </LinearLayout>
+
+
+           </android.support.v7.widget.CardView>
+
+
+
+
+   </ScrollView>
+
+
+
+
+</RelativeLayout>

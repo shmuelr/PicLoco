@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+
+    android:padding="2dp"
+
+    >
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+
+        app:primaryColor="@color/primary"
+        app:baseColor="@color/secondary_text"
+
+        app:floatingLabel="highlight"
+        app:floatingLabelAlwaysShown="true"
+        app:floatingLabelText="City or Location name"
+
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextLocationName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_margin="8dp"
+
+        android:layout_toStartOf="@+id/imageViewLocate"
+        android:layout_toLeftOf="@+id/imageViewLocate" />
+
+
+    <ImageView
+
+        android:onClick="onClickLocate"
+        android:src="@drawable/ic_action_device_gps_fixed"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageViewLocate"
+        android:layout_alignBottom="@+id/editTextLocationName" />
+
+
+    <ListView
+
+        android:visibility="gone"
+
+        android:layout_below="@+id/editTextLocationName"
+        android:layout_weight=".5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationsResultsListView"
+        android:layout_centerHorizontal="true"
+         />
+
+
+
+
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/search_progress_bar"
+        android:layout_margin="8dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/editTextLocationName"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.orbitdesign.panoramiopics.activities.PhotoActivity">
+    <item
+        android:id="@+id/action_save_to_phone" android:title="@string/action_save_to_phone"
+        android:orderInCategory="100" app:showAsAction="ifRoom" android:icon="@drawable/ic_action_file_file_download"/>
+
+    <item
+        android:id="@+id/action_set_as_wallpaper" android:title="@string/action_set_as_wallpaper"
+        android:orderInCategory="200" app:showAsAction="ifRoom" android:icon="@drawable/ic_action_image_crop_original" />
+
+    <item
+        android:id="@+id/action_share" android:title="@string/action_share"
+        android:orderInCategory="300" app:showAsAction="ifRoom" android:icon="@drawable/abc_ic_menu_share_mtrl_alpha" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="400" app:showAsAction="never" />
+
+</menu>

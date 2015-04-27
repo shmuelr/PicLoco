@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PicLoco</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_photo">Photo Activity</string>
+    <string name="action_location">Set Location</string>
+    <string name="oops_location_search_error">Oops, there was mistake here. Please email me so I can fix it.</string>
+    <string name="action_save_to_phone">Save to phone</string>
+    <string name="action_set_as_wallpaper">Set as wallpaper</string>
+    <string name="action_share">Share</string>
+    <string name="saved_photo_description">from Panoramio app</string>
+</resources>
