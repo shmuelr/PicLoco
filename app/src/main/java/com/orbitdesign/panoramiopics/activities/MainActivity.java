@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements GpsHelper.Locatio
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((MyApplication) getApplication()).getTracker(MyApplication.TrackerName.APP_TRACKER);
+        ((MyApplication) getApplication()).getTracker();
 
         setContentView(R.layout.activity_main);
         setupApp();

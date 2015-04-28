@@ -6,7 +6,6 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.orbitdesign.panoramiopics.R;
 
-import java.util.HashMap;
 
 /**
  * Created by Shmuel Rosansky on 3/13/2015.
@@ -18,22 +17,22 @@ public class MyApplication extends Application {
         APP_TRACKER
     }
 
-    private final HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();
+    private Tracker tracker = null;
 
     public MyApplication() {
         super();
     }
 
-    public synchronized Tracker getTracker(TrackerName trackerId) {
-        if (!mTrackers.containsKey(trackerId)) {
+    public synchronized Tracker getTracker() {
+        if (tracker == null) {
 
             GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
             Tracker t =  analytics.newTracker(R.xml.global_tracker);
             t.enableAutoActivityTracking(true);
             t.enableExceptionReporting(true);
-            mTrackers.put(trackerId, t);
+            tracker = t;
 
         }
-        return mTrackers.get(trackerId);
+        return tracker;
     }
 }
