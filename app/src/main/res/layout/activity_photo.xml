@@ -6,9 +6,10 @@
 
 
 
-    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:layout_below="@+id/app_bar"
         android:layout_width="fill_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:id="@+id/photoImageView"
 
         />
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
         android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@+id/photoImageView"
+        android:layout_alignBottom="@id/photoImageView"
         android:layout_below="@+id/dropShadow" />
 
 
@@ -36,7 +37,7 @@
         android:background="@drawable/toolbar_dropshadow" />
 
    <ScrollView
-       android:layout_below="@+id/photoImageView"
+       android:layout_below="@id/photoImageView"
        android:layout_width="fill_parent"
        android:layout_height="fill_parent"
        android:paddingLeft="8dp"

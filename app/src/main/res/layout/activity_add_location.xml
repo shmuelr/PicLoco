@@ -12,12 +12,12 @@
 
     <com.rengwuxian.materialedittext.MaterialEditText
 
-        app:primaryColor="@color/primary"
-        app:baseColor="@color/secondary_text"
+        app:met_primaryColor="@color/primary"
+        app:met_baseColor="@color/secondary_text"
 
-        app:floatingLabel="highlight"
-        app:floatingLabelAlwaysShown="true"
-        app:floatingLabelText="City or Location name"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelAlwaysShown="true"
+        app:met_floatingLabelText="City or Location name"
 
 
         android:layout_width="fill_parent"
