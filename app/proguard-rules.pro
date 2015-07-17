@@ -33,14 +33,12 @@
     @retrofit.http.* <methods>;
 }
 
--keepattributes Signature
--keepattributes *Annotation*
+-keepattributes *Annotation*,EnclosingMethod,Signature
+-keepnames class com.fasterxml.jackson.** { *; }
+ -dontwarn com.fasterxml.jackson.databind.**
+ -keep class org.codehaus.** { *; }
+ -keepclassmembers public final enum org.codehaus.jackson.annotate.JsonAutoDetect$Visibility {
+    public static final org.codehaus.jackson.annotate.JsonAutoDetect$Visibility *;
+ }
 
--keepnames class org.codehaus.jackson.** { *; }
--keep class org.codehaus.** { *; }
-
--dontwarn javax.xml.**
--dontwarn javax.xml.stream.events.**
--dontwarn com.fasterxml.jackson.databind.**
-
--keep class com.orbitdesign.panoramiopics.** { *; }
+-keep class com.orbitdesign.panoramiopics.models.**  { *; }

@@ -61,6 +61,8 @@ public class Photo implements Parcelable {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    // Dummy Constructor
+    public Photo() {}
 
     @Override
     public boolean equals(Object o) {
@@ -375,8 +377,6 @@ public class Photo implements Parcelable {
 
     }
 
-    public Photo() {
-    }
 
     private Photo(Parcel in) {
         this.height = in.readInt();

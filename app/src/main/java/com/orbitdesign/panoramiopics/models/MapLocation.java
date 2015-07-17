@@ -29,6 +29,9 @@ public class MapLocation {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    // Dummy Constructor
+    public MapLocation(){}
+
     /**
      * 
      * @return

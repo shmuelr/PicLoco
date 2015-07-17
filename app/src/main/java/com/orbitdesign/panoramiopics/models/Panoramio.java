@@ -34,6 +34,9 @@ public class Panoramio {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    // Dummy Constructor
+    public Panoramio(){}
+
     /**
      * 
      * @return
