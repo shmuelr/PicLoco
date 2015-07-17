@@ -157,8 +157,12 @@ public class MainActivity extends AppCompatActivity implements GpsHelper.Locatio
 
                     if(totalItemCount < mTotalAmtOfImagesForLocation -100){
                         // Stop 100 away from the end so we dont overrun
-                        Toast.makeText(MainActivity.this, "Loading more images...", Toast.LENGTH_SHORT).show();
-                        mPanoLoader.loadNext100Images();
+                        // Null check is a dirty fix for the rotate crash
+                        if( mPanoLoader != null ){
+                            Toast.makeText(MainActivity.this, "Loading more images...", Toast.LENGTH_SHORT).show();
+                            mPanoLoader.loadNext100Images();
+                        }
+
                     }
 
 
