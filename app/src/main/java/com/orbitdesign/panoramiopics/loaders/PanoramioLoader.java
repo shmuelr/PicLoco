@@ -25,11 +25,16 @@ public class PanoramioLoader extends AsyncTaskLoader<Panoramio> {
     private static final String TAG = "PanoramioLoader";
     private Location location;
     private Panoramio panoramioCache;
-    private final OkHttpClient okHttpClient = new OkHttpClient();
+
     private int from = 0, to = 100;
+
+    private static final OkHttpClient okHttpClient = new OkHttpClient();
+    private static final ObjectMapper mapper = new ObjectMapper();
+
 
     public PanoramioLoader(Context context) {
         super(context);
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
     }
 
     public PanoramioLoader(Context context, Bundle args) {
@@ -91,9 +96,6 @@ public class PanoramioLoader extends AsyncTaskLoader<Panoramio> {
         Response response = null;
         try {
             response = okHttpClient.newCall(request).execute();
-
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
             panoramio = mapper.readValue(response.body().byteStream(), Panoramio.class);
 
