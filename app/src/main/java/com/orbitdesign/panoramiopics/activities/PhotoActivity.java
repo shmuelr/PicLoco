@@ -1,6 +1,7 @@
 package com.orbitdesign.panoramiopics.activities;
 
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.content.ContentValues;
 import android.content.Context;
@@ -50,7 +51,7 @@ public class PhotoActivity extends AppCompatActivity {
 
     // This is a hacky method used to pass the small image from the MainActivity to the PhotoActivity
     // to mask network load times
-    public static BitmapDrawable IMAGE_BITMAP_SMALL = null;
+    public static Bitmap IMAGE_BITMAP_SMALL = null;
 
     private Bitmap largeBitmap = null;
 
@@ -74,7 +75,7 @@ public class PhotoActivity extends AppCompatActivity {
 
         // The small bitmap should be set by the main activity before launching this activity
         if(IMAGE_BITMAP_SMALL != null){
-            Palette palette = Palette.from(IMAGE_BITMAP_SMALL.getBitmap()).generate();
+            Palette palette = Palette.from(IMAGE_BITMAP_SMALL).generate();
             setupScreenUsingPalette(palette);
         }
 
