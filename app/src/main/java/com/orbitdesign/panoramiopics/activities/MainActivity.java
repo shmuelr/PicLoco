@@ -310,7 +310,8 @@ public class MainActivity extends AppCompatActivity implements GpsHelper.Locatio
             }else{
                 setAutoLocate(true);
                 if(mGPSHelper != null){
-                    mObservableRecView.setAlpha(128);
+                    // This sets the alpha to half of 255, using 0.5f instead of 128
+                    mObservableRecView.setAlpha(0.5f);
                     setLoadingSpinnerVisibility(true);
                     mGPSHelper.startTrackingLocation();
                 }
