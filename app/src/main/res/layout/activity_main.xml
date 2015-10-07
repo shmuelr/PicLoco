@@ -9,6 +9,9 @@
         android:id="@+id/mainList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="1dp"
         />
 
     <ProgressBar

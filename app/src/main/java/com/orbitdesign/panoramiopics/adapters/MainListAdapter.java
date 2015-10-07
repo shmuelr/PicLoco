@@ -86,6 +86,7 @@ public class MainListAdapter extends  RecyclerView.Adapter<MainListAdapter.Photo
         Glide.with(photoHolder.imageView.getContext())
                 .load(photo.getPhotoFileUrl())
                 .asBitmap()
+                .animate(R.anim.abc_fade_in) // this smoothly animates the images in
                 .into(new BitmapImageViewTarget(photoHolder.imageView) {
                     @Override
                     public void onResourceReady(Bitmap bitmap, GlideAnimation anim) {
